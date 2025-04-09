@@ -260,7 +260,9 @@ The system contains default values for every parameter.  These can be over-ridde
 
 
 **springboot版本**
-#springboot版本的数据对比后端，支持Oracle,mysql,sqlserver,pg等等
-**mvn clean install -U**
 
-**运行pgApplication**
+## springboot版本的数据对比后端，支持Oracle,mysql,sqlserver,pg等等
+
+## **mvn clean install -U**
+
+## **运行pgApplication**
