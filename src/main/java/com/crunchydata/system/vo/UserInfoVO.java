@@ -1,0 +1,23 @@
+package com.crunchydata.system.vo;
+
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+import java.io.Serial;
+import java.io.Serializable;
+import java.util.List;
+
+@Data
+@EqualsAndHashCode(callSuper = false)
+public class UserInfoVO implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
+
+    private Long userId;
+
+    private String userName;
+
+    private List<String> roles;
+
+}

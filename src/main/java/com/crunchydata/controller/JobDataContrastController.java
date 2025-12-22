@@ -8,6 +8,7 @@ import com.crunchydata.models.DCReconciliationResult;
 import com.crunchydata.models.DCResult;
 import com.crunchydata.models.JobDataContrast;
 import com.crunchydata.result.ReturnT;
+import com.crunchydata.services.JobDataContrastService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,6 +31,9 @@ public class JobDataContrastController {
 
     @Autowired
     private DCResultMapper dcResultMapper;
+
+    @Autowired
+    private JobDataContrastService jobDataContrastService;
 
 
     /** 分页查询数据对比列表适应前端新架构 */
@@ -116,6 +120,23 @@ public class JobDataContrastController {
         maps.put("total", recordTotal);
         maps.put("records", list);
         return new ReturnT<>(maps);
+    }
+
+    @GetMapping("/logDetail")
+//    @ApiOperation("任务日志")
+    public ReturnT<Map<String, Object>> logDetail(@RequestParam String logFileName) {
+        Map<String, Object> result = jobDataContrastService.logDetail(logFileName);
+
+        if (Boolean.TRUE.equals(result.get("success"))) {
+            // 成功时，直接返回content
+            return new ReturnT<>(result);
+        } else {
+            // 失败时，提取error信息到msg字段，保留content中的其他信息
+            String errorMsg = (String) result.get("error");
+            ReturnT<Map<String, Object>> returnT = new ReturnT<>(ReturnT.FAIL_CODE, errorMsg);
+            returnT.setContent(result);
+            return returnT;
+        }
     }
 
 }

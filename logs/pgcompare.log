@@ -1,0 +1,55 @@
+[2025-12-22 17:18:07.260] [INFO] [main] [c.c.DataCompareApplication] - Starting DataCompareApplication using Java 17.0.11 with PID 2284 (D:\workplace\dataCompare\target\classes started by wjx in D:\workplace\dataCompare)
+[2025-12-22 17:18:07.262] [INFO] [main] [c.c.DataCompareApplication] - No active profile set, falling back to 1 default profile: "default"
+[2025-12-22 17:18:08.139] [INFO] [main] [o.s.d.r.c.RepositoryConfigurationDelegate] - Multiple Spring Data modules found, entering strict repository configuration mode
+[2025-12-22 17:18:08.142] [INFO] [main] [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2025-12-22 17:18:08.175] [INFO] [main] [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+[2025-12-22 17:18:08.262] [WARN] [main] [o.m.s.m.ClassPathMapperScanner] - Skipping MapperFactoryBean with name 'commonDataMapper' and 'com.crunchydata.mapper.CommonDataMapper' mapperInterface. Bean already defined with the same name!
+[2025-12-22 17:18:08.262] [WARN] [main] [o.m.s.m.ClassPathMapperScanner] - Skipping MapperFactoryBean with name 'databaseUtilMapper' and 'com.crunchydata.mapper.DatabaseUtilMapper' mapperInterface. Bean already defined with the same name!
+[2025-12-22 17:18:08.262] [WARN] [main] [o.m.s.m.ClassPathMapperScanner] - Skipping MapperFactoryBean with name 'DCConfigurationsMapper' and 'com.crunchydata.mapper.DCConfigurationsMapper' mapperInterface. Bean already defined with the same name!
+[2025-12-22 17:18:08.262] [WARN] [main] [o.m.s.m.ClassPathMapperScanner] - Skipping MapperFactoryBean with name 'DCProjectMapper' and 'com.crunchydata.mapper.DCProjectMapper' mapperInterface. Bean already defined with the same name!
+[2025-12-22 17:18:08.262] [WARN] [main] [o.m.s.m.ClassPathMapperScanner] - Skipping MapperFactoryBean with name 'DCReconciliateResultMapper' and 'com.crunchydata.mapper.DCReconciliateResultMapper' mapperInterface. Bean already defined with the same name!
+[2025-12-22 17:18:08.262] [WARN] [main] [o.m.s.m.ClassPathMapperScanner] - Skipping MapperFactoryBean with name 'DCResultMapper' and 'com.crunchydata.mapper.DCResultMapper' mapperInterface. Bean already defined with the same name!
+[2025-12-22 17:18:08.262] [WARN] [main] [o.m.s.m.ClassPathMapperScanner] - Skipping MapperFactoryBean with name 'DCSourceMapper' and 'com.crunchydata.mapper.DCSourceMapper' mapperInterface. Bean already defined with the same name!
+[2025-12-22 17:18:08.262] [WARN] [main] [o.m.s.m.ClassPathMapperScanner] - Skipping MapperFactoryBean with name 'DCTableHistoryMapper' and 'com.crunchydata.mapper.DCTableHistoryMapper' mapperInterface. Bean already defined with the same name!
+[2025-12-22 17:18:08.262] [WARN] [main] [o.m.s.m.ClassPathMapperScanner] - Skipping MapperFactoryBean with name 'DCTableMapper' and 'com.crunchydata.mapper.DCTableMapper' mapperInterface. Bean already defined with the same name!
+[2025-12-22 17:18:08.262] [WARN] [main] [o.m.s.m.ClassPathMapperScanner] - Skipping MapperFactoryBean with name 'DCTargetMapper' and 'com.crunchydata.mapper.DCTargetMapper' mapperInterface. Bean already defined with the same name!
+[2025-12-22 17:18:08.262] [WARN] [main] [o.m.s.m.ClassPathMapperScanner] - Skipping MapperFactoryBean with name 'jobDataContrastMapper' and 'com.crunchydata.mapper.JobDataContrastMapper' mapperInterface. Bean already defined with the same name!
+[2025-12-22 17:18:08.262] [WARN] [main] [o.m.s.m.ClassPathMapperScanner] - Skipping MapperFactoryBean with name 'jobJdbcDataSourceMapper' and 'com.crunchydata.mapper.JobJdbcDataSourceMapper' mapperInterface. Bean already defined with the same name!
+[2025-12-22 17:18:08.263] [WARN] [main] [o.m.s.m.ClassPathMapperScanner] - Skipping MapperFactoryBean with name 'sysOperationLogMapper' and 'com.crunchydata.system.mapper.SysOperationLogMapper' mapperInterface. Bean already defined with the same name!
+[2025-12-22 17:18:08.263] [WARN] [main] [o.m.s.m.ClassPathMapperScanner] - Skipping MapperFactoryBean with name 'sysResourceMapper' and 'com.crunchydata.system.mapper.SysResourceMapper' mapperInterface. Bean already defined with the same name!
+[2025-12-22 17:18:08.263] [WARN] [main] [o.m.s.m.ClassPathMapperScanner] - Skipping MapperFactoryBean with name 'sysRoleMapper' and 'com.crunchydata.system.mapper.SysRoleMapper' mapperInterface. Bean already defined with the same name!
+[2025-12-22 17:18:08.263] [WARN] [main] [o.m.s.m.ClassPathMapperScanner] - Skipping MapperFactoryBean with name 'sysRoleResourceMapper' and 'com.crunchydata.system.mapper.SysRoleResourceMapper' mapperInterface. Bean already defined with the same name!
+[2025-12-22 17:18:08.263] [WARN] [main] [o.m.s.m.ClassPathMapperScanner] - Skipping MapperFactoryBean with name 'sysUserMapper' and 'com.crunchydata.system.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
+[2025-12-22 17:18:08.263] [WARN] [main] [o.m.s.m.ClassPathMapperScanner] - Skipping MapperFactoryBean with name 'sysUserRoleMapper' and 'com.crunchydata.system.mapper.SysUserRoleMapper' mapperInterface. Bean already defined with the same name!
+[2025-12-22 17:18:08.263] [WARN] [main] [o.m.s.m.ClassPathMapperScanner] - No MyBatis mapper was found in '[com.crunchydata.mapper, com.crunchydata.system.mapper]' package. Please check your configuration.
+[2025-12-22 17:18:08.773] [INFO] [main] [o.s.b.w.e.t.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+[2025-12-22 17:18:08.782] [INFO] [main] [o.a.c.h.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+[2025-12-22 17:18:08.783] [INFO] [main] [o.a.c.c.StandardService] - Starting service [Tomcat]
+[2025-12-22 17:18:08.783] [INFO] [main] [o.a.c.c.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.26]
+[2025-12-22 17:18:08.837] [INFO] [main] [o.a.c.c.C.[.[.[/]] - Initializing Spring embedded WebApplicationContext
+[2025-12-22 17:18:08.837] [INFO] [main] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1537 ms
+[2025-12-22 17:18:09.206] [WARN] [main] [c.b.m.c.m.TableInfoHelper] - Can not find table primary key in Class: "com.crunchydata.models.DCResult".
+[2025-12-22 17:18:09.206] [WARN] [main] [c.b.m.c.i.DefaultSqlInjector] - class com.crunchydata.models.DCResult ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+[2025-12-22 17:18:09.253] [WARN] [main] [c.b.m.c.m.TableInfoHelper] - This primary key of "id" is primitive !不建议如此请使用包装类 in Class: "com.crunchydata.models.JobDataContrast"
+[2025-12-22 17:18:09.257] [WARN] [main] [c.b.m.c.i.m.Delete] - [com.crunchydata.mapper.JobDataContrastMapper.delete] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Delete]
+[2025-12-22 17:18:09.258] [WARN] [main] [c.b.m.c.i.m.Update] - [com.crunchydata.mapper.JobDataContrastMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[2025-12-22 17:18:09.279] [WARN] [main] [c.b.m.c.i.m.Update] - [com.crunchydata.mapper.JobJdbcDataSourceMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+[2025-12-22 17:18:09.622] [WARN] [main] [c.b.m.c.m.TableInfoHelper] - Can not find table primary key in Class: "com.crunchydata.models.DCTable".
+[2025-12-22 17:18:09.623] [WARN] [main] [c.b.m.c.i.DefaultSqlInjector] - class com.crunchydata.models.DCTable ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+[2025-12-22 17:18:09.635] [WARN] [main] [c.b.m.c.m.TableInfoHelper] - Can not find table primary key in Class: "com.crunchydata.models.DCTableHistory".
+[2025-12-22 17:18:09.635] [WARN] [main] [c.b.m.c.i.DefaultSqlInjector] - class com.crunchydata.models.DCTableHistory ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+[2025-12-22 17:18:09.661] [WARN] [main] [c.b.m.c.m.TableInfoHelper] - Can not find table primary key in Class: "java.lang.Object".
+[2025-12-22 17:18:09.661] [WARN] [main] [c.b.m.c.i.DefaultSqlInjector] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+[2025-12-22 17:18:10.127] [INFO] [main] [o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer] - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+[2025-12-22 17:18:10.484] [INFO] [main] [o.s.b.a.e.w.EndpointLinksResolver] - Exposing 1 endpoint beneath base path '/actuator'
+[2025-12-22 17:18:11.034] [INFO] [main] [o.a.c.h.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+[2025-12-22 17:18:11.058] [INFO] [main] [o.s.b.w.e.t.TomcatWebServer] - Tomcat started on port 8080 (http) with context path '/'
+[2025-12-22 17:18:11.072] [INFO] [main] [c.c.DataCompareApplication] - Started DataCompareApplication in 4.416 seconds (process running for 5.076)
+[2025-12-22 17:18:11.377] [INFO] [RMI TCP Connection(2)-10.16.6.22] [o.a.c.c.C.[.[.[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2025-12-22 17:18:11.377] [INFO] [RMI TCP Connection(2)-10.16.6.22] [o.s.w.s.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+[2025-12-22 17:18:11.377] [INFO] [RMI TCP Connection(3)-10.16.6.22] [c.z.h.HikariDataSource] - HikariPool-1 - Starting...
+[2025-12-22 17:18:11.378] [INFO] [RMI TCP Connection(2)-10.16.6.22] [o.s.w.s.DispatcherServlet] - Completed initialization in 1 ms
+[2025-12-22 17:18:11.680] [INFO] [RMI TCP Connection(3)-10.16.6.22] [c.z.h.p.HikariPool] - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@b677f54
+[2025-12-22 17:18:11.683] [INFO] [RMI TCP Connection(3)-10.16.6.22] [c.z.h.HikariDataSource] - HikariPool-1 - Start completed.
+[2025-12-22 17:18:39.558] [INFO] [SpringApplicationShutdownHook] [c.z.h.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+[2025-12-22 17:18:39.565] [INFO] [SpringApplicationShutdownHook] [c.z.h.HikariDataSource] - HikariPool-1 - Shutdown completed.

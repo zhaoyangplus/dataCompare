@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DataCompareApplication<dataCompare>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.crunchydata.DataCompareApplication",
+            "projectName": "dataCompare",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

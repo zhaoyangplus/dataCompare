@@ -50,7 +50,7 @@ public class PgCompareServiceImpl implements PgCompareService {
     private String repoPassword;
 
     @Autowired
-    private JobDatasourceMapper jobDataSourceMapper;
+    private JobJdbcDataSourceMapper jobDataSourceMapper;
 
     @Autowired
     private DCProjectMapper dcProjectMapper;

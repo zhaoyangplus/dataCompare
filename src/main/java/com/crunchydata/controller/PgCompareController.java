@@ -3,15 +3,15 @@ package com.crunchydata.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.crunchydata.mapper.DCProjectMapper;
 import com.crunchydata.mapper.JobDataContrastMapper;
+import com.crunchydata.models.CommonData;
 import com.crunchydata.models.DCConfigurations;
 import com.crunchydata.models.JobDataContrast;
 import com.crunchydata.result.ReturnT;
-import com.crunchydata.services.CommonDataService;
-import com.crunchydata.services.DCConfigurationsService;
-import com.crunchydata.services.DatabaseUtilService;
-import com.crunchydata.services.PgCompareService;
+import com.crunchydata.services.*;
 import com.crunchydata.util.Logging;
+import com.crunchydata.utils.CrossPlatformPathUtils;
 import com.crunchydata.vo.ReconcileRequestVO;
+import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -43,8 +43,10 @@ public class PgCompareController {
     @Autowired
     private CommonDataService commonDataService;
 
-//    @Autowired
-//    private SubMetaDataService subMetaDataService;
+    @Autowired
+    private JobDataContrastService jobDataContrastService;
+
+
 
     @Autowired
     private DCConfigurationsService dcConfigurationsService;
@@ -140,10 +142,10 @@ public class PgCompareController {
         }
     }
 
-//    @RequestMapping(value = "/removePid", method = RequestMethod.POST)
-//    public ReturnT<String> removePid(int pid) {
-//        return pgCompareService.deleteByPid(pid);
-//    }
+    @RequestMapping(value = "/removePid", method = RequestMethod.POST)
+    public ReturnT<String> removePid(int pid) {
+        return pgCompareService.deleteByPid(pid);
+    }
 
 //    @GetMapping("/compareLogDetail")
 //    public ReturnT<Map<String, Object>> getCompareLogDetail(@RequestParam Integer pid) {
@@ -156,7 +158,7 @@ public class PgCompareController {
 //        String fileName = Paths.get(content).getFileName().toString();
 //        String logFileName = FilenameUtils.removeExtension(fileName);
 //
-//        Map<String, Object> result = subMetaDataService.logDetail(logFileName);
+//        Map<String, Object> result = jobDataContrastService.logDetail(logFileName);
 //
 //        if (Boolean.TRUE.equals(result.get("success"))) {
 //            // 成功时，直接返回content

@@ -6,7 +6,17 @@ spring:
     driver-class-name: org.postgresql.Driver
     username: postgres
     password: postgres
-    url: jdbc:postgresql://127.0.0.1:5432/pgcompare?currentSchema=pgcompare
+    url: jdbc:postgresql://127.0.0.1:5432/datacompare?currentSchema=pgcompare
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      password: 123456
+      database: 10
+#      输出日志的颜色为彩色，方便查看
+  output:
+    ansi:
+      enabled: always
 
 
 #
@@ -24,8 +34,24 @@ mybatis-plus:
   #驼峰映射：例如数据库中的字段名emp_name能对应实体类中的属性名empName
   configuration:
     map-underscore-to-camel-case: true
+    column-underline: true
+
+jwt:
+  tokenHeader: Authorization #JWT存储的请求头
+  secret: cIu/8+3C9+9+h92OcQ3a3EPQSEJekdrRkFCAxR7U3QpCPoZZkBKJOAviU45yzSm7S/0x1YqLltI+PVbUYJNNuA== #JWT加解密使用的密钥
+  expiration: 43200 #JWT的超期限时间(12*60*60) 12小时
+  tokenHead: 'Bearer '  #JWT负载中拿到开头
 
 datasource:
   aes:
     key: AD42F6697B035B75
 
+
+# 日志配置
+logging:
+  config: classpath:logback-spring.xml
+#  file:
+#    path: logs/pea
+#  level:
+#    root: info
+#    com.pea: debug
