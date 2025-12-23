@@ -5,13 +5,13 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     username: postgres
-    password: postgres
-    url: jdbc:postgresql://127.0.0.1:5432/pgcompare?currentSchema=pgcompare
+    password: "密码"
+    url: jdbc:postgresql://{ip}:5432/pgcompare?currentSchema=pgcompare
   data:
     redis:
-      host: 127.0.0.1
+      host: {ip}
       port: 6379
-      password: 123456
+      password: "密码"
       database: 10
 #      输出日志的颜色为彩色，方便查看
   output:
