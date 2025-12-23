@@ -658,6 +658,7 @@ declare namespace App {
               dm: string;
               db2: string;
               hive: string;
+              polardb: string;
             };
             addDatasource: string;
             editDatasource: string;

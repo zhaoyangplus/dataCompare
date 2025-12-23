@@ -20,6 +20,8 @@ import sqlserverImg from '@/assets/db-imgs/sqlserver.png';
 import dmImg from '@/assets/db-imgs/dm.png';
 import db2Img from '@/assets/db-imgs/db2.png';
 import hiveImg from '@/assets/db-imgs/hive.png';
+import polardbImg from '@/assets/db-imgs/polardb.png';
+
 
 // export const enableStatusRecord: Record<Api.Common.EnableStatus, App.I18n.I18nKey> = {
 //   '1': 'page.manage.common.status.enable',
@@ -182,6 +184,11 @@ export const datasourceRecord = [
     label: 'page.datasource.manage.datasourceRecord.hive',
     value: 'hive',
     imageUrl: hiveImg
+  },
+  {
+    label: 'page.datasource.manage.datasourceRecord.polardb',
+    value: 'polardb',
+    imageUrl: polardbImg
   }
 ];
 

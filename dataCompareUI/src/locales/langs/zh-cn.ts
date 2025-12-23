@@ -427,7 +427,8 @@ const local: App.I18n.Schema = {
           sqlserver: 'SQL Server',
           dm: '达梦数据库',
           db2: 'Db2',
-          hive: 'Hive'
+          hive: 'Hive',
+          polardb: 'PolarDB'
         },
         addDatasource: '新增数据源',
         editDatasource: '编辑数据源',

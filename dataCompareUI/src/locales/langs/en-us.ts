@@ -448,7 +448,8 @@ const local: App.I18n.Schema = {
           sqlserver: 'SQL Server',
           dm: 'Dameng',
           db2: 'Db2',
-          hive: 'Hive'
+          hive: 'Hive',
+          polardb: 'PolarDB'
         },
         addDatasource: 'Add Datasource',
         editDatasource: 'Edit Datasource',

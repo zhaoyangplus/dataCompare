@@ -25,7 +25,7 @@ export function setupLoading() {
   ];
 
   // const logoWithClass = systemLogo.replace('<svg', `<svg class="size-128px text-primary"`);
-  const logoWithClass = `<div class="w-124px"><img src="/halo-logo.png" /></div>`;
+  const logoWithClass = `<div class="w-124px"><img src="/DataCompareLogo.png" /></div>`;
 
   const dot = loadingClasses
     .map(item => {

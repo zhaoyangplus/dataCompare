@@ -5,7 +5,7 @@ defineOptions({ name: 'SystemLogo' });
 <template>
   <!-- <icon-local-logo /> -->
   <div>
-    <img src="/halo-logo.png" />
+    <img src="/DataCompareLogo.png" />
   </div>
 </template>
 
