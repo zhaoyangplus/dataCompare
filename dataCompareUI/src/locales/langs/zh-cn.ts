@@ -1,6 +1,6 @@
 const local: App.I18n.Schema = {
   system: {
-    title: '异构数据库检验平台',
+    title: '异构数据库对比平台',
     updateTitle: '系统版本更新通知',
     updateContent: '检测到系统有新版本发布，是否立即刷新页面？',
     updateConfirm: '立即刷新',
@@ -246,7 +246,7 @@ const local: App.I18n.Schema = {
     home: {
       branchDesc:
         '为了方便大家开发和更新合并，我们对main分支的代码进行了精简，只保留了首页菜单，其余内容已移至example分支进行维护。预览地址显示的内容即为example分支的内容。',
-      greeting: '欢迎回来，{userName}，数据迁移，从这里开始!',
+      greeting: '欢迎回来，{userName}，数据校验，从这里开始!',
       weatherDesc:
         '异构数据库对比工具，致力于利用简洁直观的Web操作界面来高效地完成Oracle、MySQL、PostgreSQL等多种数据库之间的数据对比校验功能。',
       projectCount: '项目数',
@@ -326,11 +326,6 @@ const local: App.I18n.Schema = {
           male: '男',
           female: '女'
         }
-      },
-      monitor: {
-        CPUUse: 'CPU使用率',
-        storageUse: '内存使用率',
-        averageLoad: '平均负载'
       },
       menu: {
         home: '首页',
@@ -428,7 +423,13 @@ const local: App.I18n.Schema = {
           dm: '达梦数据库',
           db2: 'Db2',
           hive: 'Hive',
-          polardb: 'PolarDB'
+          polardb: 'PolarDB',
+          tidb: 'TiDB',
+          oceanbase: 'OceanBase',
+          snowflake: 'Snowflake',
+          mariadb: 'MariaDB',
+          kingbase: 'KingbaseES',
+          opengauss: 'OpenGauss'
         },
         addDatasource: '新增数据源',
         editDatasource: '编辑数据源',
@@ -454,11 +455,8 @@ const local: App.I18n.Schema = {
         writerDatasourceId: '请输入目标端 ID',
         writerDatasource: '请选择目标端数据库',
         readerSchema: '请输入源端Schema',
-        writerSchema: '请输入目标端Schema'
-      },
-      metaType: {
-        dataContrast: '数据对比',
-        metaContrast: '元数据对比'
+        writerSchema: '请输入目标端Schema',
+        readerTables: '请选择校验的表'
       },
       addContrast: '新增对比任务',
       dataDetails: {
@@ -533,38 +531,8 @@ const local: App.I18n.Schema = {
           failed: '校验失败',
           selectStatus: '请选择校验状态'
         }
-      },
-      metaDetails: {
-        title: '元数据对比详情列表',
-        readerTable: '源端对象',
-        writerTable: '目标端对象',
-        metaType: '元数据类型',
-        tableName: '对象名称',
-        isConsistent: '是否一致',
-        fastSelect: '快捷筛选',
-        objectName: '对象快捷筛选',
-        metaInfo: '该语句仅用于对比，并不是完整的语句。',
-        sideBySide: '并行显示',
-        lineByLine: '逐行显示',
-        switchSql: '切换语法',
-        isCorrect: {
-          consistent: '一致',
-          inconsistent: '不一致'
-        },
-        form: {
-          readerTable: '请选择源端对象',
-          writerTable: '请选择目标端对象',
-          tableName: '请输入对象名称',
-          fastSelect: '快捷筛选',
-          isCorrect: '请选择结果是否一致'
-        },
-        allTable: '全部结果',
-        allCount: '源端共：{0} 个对象，目标端共：{1} 个对象，',
-        mismatchCount: '不一致的对象有 {0} 个',
-        sourceTableNotExist: '源端对象不存在',
-        targetTableNotExist: '目标端对象不存在'
       }
-    },
+    }
   },
   form: {
     required: '不能为空',

@@ -7,7 +7,7 @@ defineOptions({
 <template>
   <DarkModeContainer class="h-full flex-center">
     <a href="" target="_blank" rel="noopener noreferrer">
-      Copyright 杭州易景数通科技有限公司 © 2025 HaloMigrationTool
+      Copyright DataComparePlatform © 2025 Different Databases Data Compare
     </a>
   </DarkModeContainer>
 </template>

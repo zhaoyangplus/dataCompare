@@ -6,7 +6,7 @@ spring:
     driver-class-name: org.postgresql.Driver
     username: postgres
     password: postgres
-    url: jdbc:postgresql://127.0.0.1:5432/datacompare?currentSchema=pgcompare
+    url: jdbc:postgresql://127.0.0.1:5432/pgcompare?currentSchema=pgcompare
   data:
     redis:
       host: 127.0.0.1

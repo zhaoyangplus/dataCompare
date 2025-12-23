@@ -18,8 +18,8 @@ withDefaults(defineProps<Props>(), {
 <template>
   <RouterLink to="/" class="w-full flex-center nowrap-hidden">
     <!-- <SystemLogo class="text-32px text-primary" /> -->
-    <SystemLogo class="w-32px" />
-    <h2 v-show="showTitle" class="pl-8px text-16px text-primary font-bold transition duration-300 ease-in-out">
+    <SystemLogo class="w-32px flex-shrink-0" />
+    <h2 v-show="showTitle" class="pl-12px text-16px text-primary font-bold transition duration-300 ease-in-out">
       {{ $t('system.title') }}
     </h2>
   </RouterLink>

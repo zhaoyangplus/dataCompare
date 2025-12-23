@@ -557,11 +557,6 @@ declare namespace App {
               female: string;
             };
           };
-          monitor: {
-            CPUUse: string;
-            storageUse: string;
-            averageLoad: string;
-          };
           menu: {
             home: string;
             title: string;
@@ -659,273 +654,16 @@ declare namespace App {
               db2: string;
               hive: string;
               polardb: string;
+              tidb: string;
+              oceanbase: string;
+              snowflake: string;
+              mariadb: string;
+              kingbase: string;
+              opengauss: string;
             };
             addDatasource: string;
             editDatasource: string;
             title: string;
-          };
-        };
-        project: {
-          manage: {
-            title: string;
-            projectName: string;
-            description: string;
-            userName: string;
-            updateTime: string;
-            triggerStatus: string;
-            runningStatus: string;
-            form: {
-              projectName: string;
-              description: string;
-            };
-            addProject: string;
-            editProject: string;
-          };
-          autoMigrate: {
-            logDetails: string;
-            runningStatus: {
-              unstart: string;
-              running: string;
-              abnormal: string;
-              finally: string;
-              stopping: string;
-              stopped: string;
-            };
-            addProject: string;
-          };
-        };
-        executor: {
-          manage: {
-            title: string;
-            executorName: string;
-            groupID: string;
-            registerType: string;
-            order: string;
-            onlineMachine: string;
-            updateTime: string;
-            form: {
-              groupID: string;
-              executorName: string;
-              onlineMachine: string;
-              order: string;
-            };
-            addExecutor: string;
-            editExecutor: string;
-            register: {
-              autoRegister: string;
-              manualRegister: string;
-            };
-          };
-        };
-        task: {
-          batch: {
-            readerDataSource: string;
-            readerSchema: string;
-            readerTables: string;
-            writerDataSource: string;
-            writerSchema: string;
-            writerTables: string;
-            readerSplitPk: string;
-            template: string;
-            form: {
-              readerDataSource: string;
-              readerSchema: string;
-              writerDataSource: string;
-              writerSchema: string;
-              readerSplitPk: string;
-              template: string;
-            };
-            createTask: string;
-            showChekModalTitle: string;
-            checkTables: string;
-            sourceSpecific: string;
-            targetSpecific: string;
-            uncheck: string;
-            createTaskLoading: string;
-            templateTooltip: string;
-          };
-          submeta: {
-            readerDataSource: string;
-            readerSchema: string;
-            writerDataSource: string;
-            metadataIds: string;
-            template: string;
-            selectAndSql: string;
-            migrationConfig: string;
-            tableAndColSwitch: string;
-            mysqlCommandSwitch: string;
-            mysqlIp: string;
-            mysqlPort: string;
-            mysqlUser: string;
-            mysqlPwd: string;
-            tableSplitSwitch: string;
-            form: {
-              readerDataSource: string;
-              readerSchema: string;
-              writerDataSource: string;
-              template: string;
-              selectAndSql: string;
-            };
-            subMetaTypeRecord: {
-              type: string;
-              table: string;
-              constraints: string;
-              index: string;
-              function: string;
-              procedure: string;
-              view: string;
-              trigger: string;
-              package: string;
-              sequence: string;
-              tablecomment: string;
-              synonym: string;
-            };
-            createTask: string;
-            AndSqlTooltip: string;
-            processAlertTitle: string;
-            processAlertContent1: string;
-            processAlertDescription1: string;
-            processAlertContent2: string;
-            processAlertDescription2: string;
-            processAlertContent3: string;
-            processAlertDescription3: string;
-            processAlertNote: string;
-            MySqlTooltip: string;
-            metaHistoryLog: string;
-            tableSplitTooltip: string;
-          };
-          manage: {
-            jobDesc: string;
-            projectName: string;
-            jobCron: string;
-            triggerStatus: string;
-            lastHandleCode: string;
-            isStatusValid: string;
-            registerNode: string;
-            updateTime: string;
-            glueType: string;
-            isBigType: string;
-            jvmParam: string;
-            jobGroup: string;
-            projectId: string;
-            executorRouteStrategy: string;
-            executorBlockStrategy: string;
-            executorFailRetryCount: string;
-            executorTimeout: string;
-            editorCode: string;
-            form: {
-              jobDesc: string;
-              jvmParam: string;
-            };
-            glueTypeRecord: {
-              datax: string;
-              shell: string;
-            };
-            lastHandleCodeRecord: {
-              await: string;
-              running: string;
-              success: string;
-              error: string;
-              timeout: string;
-            };
-            isStatusValidRecord: {
-              valid: string;
-              invalid: string;
-              enabled: string;
-              disabled: string;
-              null: string;
-            };
-            routeStrategiesRecord: {
-              first: string;
-              last: string;
-              round: string;
-              random: string;
-              consistentHash: string;
-              leastFrequentlyUsed: string;
-              leastRecentlyUsed: string;
-              failover: string;
-              busyover: string;
-            };
-            blockStrategiesRecord: {
-              serialExecution: string;
-              discardLater: string;
-              coverEarly: string;
-            };
-            isBigTypeOptions: {
-              yes: string;
-              no: string;
-            };
-            batchStart: string;
-            confirmBatchStart: string;
-            failRestart: string;
-            confirmFailRestart: string;
-            batchStop: string;
-            confirmBatchStop: string;
-            editTask: string;
-            title: string;
-            editScript: string;
-            filePath: string;
-            setModalTitle: string;
-            setModalMsg: string;
-          };
-          build: {
-            readerTable: string;
-            writerTable: string;
-            readerTableField: string;
-            writerTableField: string;
-            querySql: string;
-            where: string;
-            preSql: string;
-            postSql: string;
-            form: {
-              readerTable: string;
-              writerTable: string;
-              querySql: string;
-              where: string;
-              preSql: string;
-              postSql: string;
-            };
-            createTask: string;
-            getColumnsError: string;
-            buildTaskJson: string;
-            editTaskJson: string;
-          };
-          datatype: {
-            title: string;
-            dataSource: string;
-            sourceType: string;
-            targetType: string;
-            value: string;
-            updateTime: string;
-            form: {
-              dataSource: string;
-              sourceType: string;
-              targetType: string;
-              example: string;
-              mapsTo: string;
-              value: {
-                retainValue: string;
-                notRetainValue: string;
-              };
-            };
-            addDtm: string;
-            editDtm: string;
-          };
-          tasktemplate: {
-            title: string;
-            taskID: string;
-            taskDesc: string;
-            projectName: string;
-            routingPolicy: string;
-            userName: string;
-            registerNode: string;
-            form: {
-              enterTaskDesc: string;
-              projectAffiliation: string;
-            };
-            look: string;
-            addTemplate: string;
-            editTemplate: string;
           };
         };
         contrast: {
@@ -948,10 +686,7 @@ declare namespace App {
             writerDatasource: string;
             readerSchema: string;
             writerSchema: string;
-          };
-          metaType: {
-            dataContrast: string;
-            metaContrast: string;
+            readerTables: string;
           };
           addContrast: string;
           dataDetails: {
@@ -1027,85 +762,6 @@ declare namespace App {
               selectStatus: string;
             };
           };
-          metaDetails: {
-            title: string;
-            readerTable: string;
-            writerTable: string;
-            metaType: string;
-            tableName: string;
-            isConsistent: string;
-            fastSelect: string;
-            objectName: string;
-            metaInfo: string;
-            sideBySide: string;
-            lineByLine: string;
-            switchSql: string;
-            isCorrect: {
-              consistent: string;
-              inconsistent: string;
-            };
-            form: {
-              readerTable: string;
-              writerTable: string;
-              tableName: string;
-              fastSelect: string;
-              isCorrect: string;
-            };
-            allTable: string;
-            allCount: string;
-            mismatchCount: string;
-            sourceTableNotExist: string;
-            targetTableNotExist: string;
-          };
-        };
-        report: {
-          metaTitle: string;
-          dataTitle: string;
-          metaReport: {
-            metaType: string;
-            allCount: string;
-            sucessCount: string;
-            failCount: string;
-            waitCount: string;
-            executeCount: string;
-          };
-        };
-        log: {
-          look: string;
-          title: string;
-          taskID: string;
-          taskDesc: string;
-          metaType: string;
-          triggerTime: string;
-          triggerCode: string;
-          triggerMsg: string;
-          handleTime: string;
-          handleCode: string;
-          handleMsg: string;
-          form: {
-            enterTaskDesc: string;
-            allExecutor: string;
-            all: string;
-            executor: string;
-            result: string;
-            success: string;
-            fail: string;
-            running: string;
-          };
-          clearLog: string;
-          selectClearType: string;
-          clearType: string;
-          clearMonth1: string;
-          clearMonth3: string;
-          clearMonth6: string;
-          clearYear1: string;
-          clear1k: string;
-          clear10k: string;
-          clear30k: string;
-          clear100k: string;
-          clearAll: string;
-          clearSuccess: string;
-          clearFail: string;
         };
       };
       form: {

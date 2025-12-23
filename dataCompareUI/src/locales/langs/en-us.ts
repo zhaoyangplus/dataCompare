@@ -1,6 +1,6 @@
 const local: App.I18n.Schema = {
   system: {
-    title: 'HaloMigrationTool',
+    title: 'DataComparePlatform',
     updateTitle: 'System Version Update Notification',
     updateContent: 'A new version of the system has been detected. Do you want to refresh the page immediately?',
     updateConfirm: 'Refresh immediately',
@@ -191,31 +191,10 @@ const local: App.I18n.Schema = {
     manage_menu: 'Menu Manage',
     datasource: 'Data Source Manage',
     datasource_manage: 'Data Source',
-    task: 'Task Manage',
-    task_batch: 'Batch Create Task',
-    task_submeta: 'Build Metadata Task',
-    task_manage: 'Task Manage',
-    task_datatype: 'DataType Mapping',
-    task_tasktemplate: 'Task Template',
-    project: 'Project Manage',
-    project_manage: 'Project List',
-    project_automigrate: 'Project Automigrate',
-    executor: 'Executor Manage',
-    executor_manage: 'Executor List',
     contrast: 'Contrast Manage',
-    contrast_datacontrast: 'Data Contrast',
-    contrast_datadetails: 'Data Contrast Details',
-    contrast_metacontrast: 'Meta Contrast',
-    contrast_metadetails: 'Meta Contrast Details',
     contrast_verifydata: 'Data Verify',
     contrast_verifydetails: 'Data Verify Details',
     contrast_verifyconfig: 'Verify Config',
-    report: 'Statistics Report',
-    report_metareport: 'Meta Report',
-    report_datareport: 'Data Report',
-    log: 'Log Manage',
-    log_manage: 'Log List',
-    task_build: 'Create Task'
   },
   page: {
     login: {
@@ -267,9 +246,9 @@ const local: App.I18n.Schema = {
     home: {
       branchDesc:
         'For the convenience of everyone in developing and updating the merge, we have streamlined the code of the main branch, only retaining the homepage menu, and the rest of the content has been moved to the example branch for maintenance. The preview address displays the content of the example branch.',
-      greeting: 'Welcome back, {userName}, Data migration starts here!',
+      greeting: 'Welcome back, {userName}, Data Compare starts here!',
       weatherDesc:
-        'Halo database migration tool is committed to using simple and intuitive Web interface to efficiently and stably complete the data migration function between Oracle, MySQL and other databases to Halo database .',
+        'Data Compare Platform is dedicated to efficiently performing data comparison and verification functions among various databases such as Oracle, MySQL, and PostgreSQL, through a simple and intuitive web-based operation interface.',
       projectCount: 'Project Count',
       todo: 'Version Number',
       message: 'Message',
@@ -347,11 +326,6 @@ const local: App.I18n.Schema = {
           male: 'Male',
           female: 'Female'
         }
-      },
-      monitor: {
-        CPUUse: 'CPU Usage Rate',
-        storageUse: 'Internal Storage Usage Rate',
-        averageLoad: 'Average Load'
       },
       menu: {
         home: 'Home',
@@ -449,280 +423,17 @@ const local: App.I18n.Schema = {
           dm: 'Dameng',
           db2: 'Db2',
           hive: 'Hive',
-          polardb: 'PolarDB'
+          polardb: 'PolarDB',
+          tidb: 'TiDB',
+          oceanbase: 'OceanBase',
+          snowflake: 'Snowflake',
+          mariadb: 'MariaDB',
+          kingbase: 'KingbaseES',
+          opengauss: 'OpenGauss'
         },
         addDatasource: 'Add Datasource',
         editDatasource: 'Edit Datasource',
         title: 'Datasource List'
-      }
-    },
-    project: {
-      manage: {
-        title: 'Project List',
-        projectName: 'Project name',
-        description: 'Project description',
-        userName: 'User Name',
-        updateTime: 'Update Time',
-        triggerStatus: 'Trigger Status',
-        runningStatus: 'Running Status',
-        form: {
-          projectName: 'Please enter project name',
-          description: 'Please enter project description'
-        },
-        addProject: 'Add Project',
-        editProject: 'Edit Project'
-      },
-      autoMigrate: {
-        logDetails: 'log Detail',
-        runningStatus: {
-          unstart: 'unstart',
-          running: 'running',
-          abnormal: 'abnormal',
-          finally: 'finally',
-          stopping: 'stopping',
-          stopped: 'stopped'
-        },
-        addProject: 'Add One-click Migration Task'
-      }
-    },
-    executor: {
-      manage: {
-        title: 'Executor List',
-        executorName: 'Executor Name',
-        groupID: 'Group ID',
-        registerType: 'Register Type',
-        order: 'Order',
-        onlineMachine: 'Online Machine Address',
-        updateTime: 'Update Time',
-        form: {
-          groupID: 'Please enter Group ID',
-          executorName: 'Please enter Executor Name',
-          onlineMachine: 'Please enter Machine Address',
-          order: 'Please enter Order'
-        },
-        addExecutor: 'Add Executor',
-        editExecutor: 'Edit Executor',
-        register: {
-          autoRegister: 'Auto Register',
-          manualRegister: 'Manual Register'
-        }
-      }
-    },
-    task: {
-      batch: {
-        readerDataSource: 'Source DataSource',
-        readerSchema: 'Source Schema',
-        readerTables: 'Source Tables',
-        writerDataSource: 'Target DataSource',
-        writerSchema: 'Target Schema',
-        writerTables: 'Target Tables',
-        readerSplitPk: 'Split Primary Key',
-        template: 'Task Template',
-        form: {
-          readerDataSource: 'Please select source',
-          readerSchema: 'Please select source schema',
-          writerDataSource: 'Please select target',
-          writerSchema: 'Please select target schema',
-          readerSplitPk: 'Please enter split primary key',
-          template: 'Please select task template'
-        },
-        createTask: 'Batch Create Task',
-        showChekModalTitle: 'Table Discrepancies',
-        checkTables: 'Check Table Consistency Between Source And Target',
-        sourceSpecific: 'Source-Specific Tables',
-        targetSpecific: 'Target-Specific Tables',
-        uncheck: 'One-Click Deselect',
-        createTaskLoading: 'Data migration tasks are being created in batches',
-        templateTooltip: 'The executor and JVM memory are specified in the task template'
-      },
-      submeta: {
-        readerDataSource: 'Source DataSource',
-        readerSchema: 'Source Schema',
-        writerDataSource: 'Target DataSource',
-        metadataIds: 'Metadata Collection',
-        template: 'Task Template',
-        selectAndSql: 'Filter Condition',
-        migrationConfig: 'Migration Config',
-        tableAndColSwitch: 'Quotes Check Switch',
-        mysqlCommandSwitch: 'MySQL Command Switch',
-        mysqlIp: 'IP Address',
-        mysqlPort: 'Port',
-        mysqlUser: 'User Name',
-        mysqlPwd: 'Pwd',
-        tableSplitSwitch: 'Table Split Switch',
-        form: {
-          readerDataSource: 'Please select source',
-          readerSchema: 'Please select source schema',
-          writerDataSource: 'Please select target',
-          template: 'Please select task template',
-          selectAndSql: 'Please enter sql and clause'
-        },
-        subMetaTypeRecord: {
-          type: 'TYPE',
-          table: 'TABLE',
-          constraints: 'CONSTRAINTS',
-          index: 'INDEX',
-          function: 'FUNCTION',
-          procedure: 'PROCEDURE',
-          view: 'VIEW',
-          trigger: 'TRIGGER',
-          package: 'PACKAGE',
-          sequence: 'SEQUENCE',
-          tablecomment: 'TABLECOMMENT',
-          synonym: 'SYNONYM'
-        },
-        createTask: 'Build Metadata Task',
-        AndSqlTooltip: 'Enter an SQL AND clause, ensuring its syntax adheres to metadata query rules.',
-        processAlertTitle: 'You are advised to perform the following steps to migrate the database',
-        processAlertContent1: 'First, migrate basic table structures',
-        processAlertDescription1:
-          'Quickly establish the foundational framework of the target database to prepare for subsequent data migration.',
-        processAlertContent2: 'Next, migrate the full dataset',
-        processAlertDescription2:
-          'With the basic table structures in place, this phase focuses on data transfer, avoiding overhead such as index maintenance and accelerating migration speed.',
-        processAlertContent3: 'Migrate subsequent script tasks only after data is fully written',
-        processAlertDescription3:
-          'After completing the data migration, execute all necessary constraints, indexes, and other metadata scripts.',
-        processAlertNote:
-          'By adhering to these steps, you will not only improve overall migration efficiency but also minimize the risk of errors, ensuring a smooth transition between the source and target databases.',
-        MySqlTooltip: 'When enabled, you need to configure the connection parameters below.',
-        metaHistoryLog: 'List of Historical Log Information (Last 10 Times)',
-        tableSplitTooltip: 'When enabled, it will split the table structure into individual tasks.'
-      },
-      manage: {
-        jobDesc: 'Task Name',
-        projectName: 'Project Name',
-        jobCron: 'Metadata Type',
-        triggerStatus: 'Trigger Status',
-        lastHandleCode: 'Executing Status',
-        isStatusValid: 'Metadata Status',
-        registerNode: 'Register Node',
-        updateTime: 'Update Time',
-        glueType: 'Glue Type',
-        isBigType: 'Include LOBs',
-        jvmParam: 'JVM Startup Parameters',
-        jobGroup: 'Executor',
-        projectId: 'Belonging Project',
-        executorRouteStrategy: 'Routing Strategy',
-        executorBlockStrategy: 'Blocking Handling',
-        executorFailRetryCount: 'Fail Retry Count',
-        executorTimeout: 'Timeout (minutes)',
-        editorCode: 'Code Block',
-        form: {
-          jobDesc: 'Please enter task name',
-          jvmParam: '-Xms1024m -Xmx1024m -XX:+HeapDumpOnOutOfMemoryError'
-        },
-        glueTypeRecord: {
-          datax: 'DataX Task',
-          shell: 'Shell Task'
-        },
-        lastHandleCodeRecord: {
-          await: 'await',
-          running: 'running',
-          success: 'success',
-          error: 'error',
-          timeout: 'timeout'
-        },
-        isStatusValidRecord: {
-          valid: 'VALID',
-          invalid: 'INVALID',
-          enabled: 'ENABLED',
-          disabled: 'DISABLED',
-          null: 'NULL'
-        },
-        routeStrategiesRecord: {
-          first: 'FIRST',
-          last: 'LAST',
-          round: 'ROUND',
-          random: 'RANDOM',
-          consistentHash: 'CONSISTENT_HASH',
-          leastFrequentlyUsed: 'LEAST_FREQUENTLY_USED',
-          leastRecentlyUsed: 'LEAST_RECENTLY_USED',
-          failover: 'FAILOVER',
-          busyover: 'BUSYOVER'
-        },
-        blockStrategiesRecord: {
-          serialExecution: 'SERIAL_EXECUTION',
-          discardLater: 'DISCARD_LATER',
-          coverEarly: 'COVER_EARLY'
-        },
-        isBigTypeOptions: {
-          yes: 'yes',
-          no: 'no'
-        },
-        batchStart: 'Batch Start',
-        confirmBatchStart: 'Are you sure you want to batch start?',
-        failRestart: 'Fail Restart',
-        confirmFailRestart: 'Are you sure you want to fail restart?',
-        batchStop: 'Batch Stop',
-        confirmBatchStop: 'Are you sure you want to batch stop?',
-        editTask: 'Edit Task',
-        title: 'Task List',
-        editScript: 'Edit Script',
-        filePath: 'File Path',
-        setModalTitle: 'Batch set the data writing mode',
-        setModalMsg:
-          'When the table contains large fields, using the default write method may fail and you need to switch to the halowriter mode'
-      },
-      build: {
-        readerTable: 'Source Table',
-        writerTable: 'Target Table',
-        readerTableField: 'Source Field',
-        writerTableField: 'Target Field',
-        querySql: 'SQL',
-        where: 'Where',
-        preSql: 'Pre Sql',
-        postSql: 'Post Sql',
-        form: {
-          readerTable: 'Please select source table',
-          writerTable: 'Please select target table',
-          querySql: 'SQL queries are generally used for multi-table queries',
-          where: 'WHERE condition, no need to add WHERE again.',
-          preSql: 'Pre-execution SQL is executed before the INSERT operation.',
-          postSql:
-            "Post-execution SQL statements are executed after the INSERT operation, with multiple statements separated by ';'"
-        },
-        createTask: 'Single table build task',
-        getColumnsError: 'Please select the source data source first.',
-        buildTaskJson: 'Click to generate the task JSON.',
-        editTaskJson: 'Edit Task JSON'
-      },
-      datatype: {
-        title: 'Datatype List',
-        dataSource: 'Data Source',
-        sourceType: 'Source Type',
-        targetType: 'Target Type',
-        value: 'Retain values in parentheses',
-        updateTime: 'Update Time',
-        form: {
-          dataSource: 'Please select data source',
-          sourceType: 'Please enter source type',
-          targetType: 'Please enter target type',
-          example: 'Example',
-          mapsTo: 'maps to',
-          value: {
-            retainValue: 'Retain',
-            notRetainValue: 'Not Retain'
-          }
-        },
-        addDtm: 'Add data type mapping',
-        editDtm: 'Edit data type mapping'
-      },
-      tasktemplate: {
-        title: 'Task Template List',
-        taskID: 'Task ID',
-        taskDesc: 'Task Description',
-        projectName: 'Project Affiliation',
-        routingPolicy: 'Routing policy',
-        userName: 'userName',
-        registerNode: 'Register Node',
-        form: {
-          enterTaskDesc: 'Please Enter Task',
-          projectAffiliation: 'Project Affiliation'
-        },
-        look: 'Examine',
-        addTemplate: 'Add Template',
-        editTemplate: 'Edit Template'
       }
     },
     contrast: {
@@ -744,11 +455,8 @@ const local: App.I18n.Schema = {
         writerDatasourceId: 'Please enter target ID',
         writerDatasource: 'Please select target',
         readerSchema: 'Please enter source schema',
-        writerSchema: 'Please enter target schema'
-      },
-      metaType: {
-        dataContrast: 'Data contrast',
-        metaContrast: 'Meta contrast'
+        writerSchema: 'Please enter target schema',
+        readerTables: 'Please select compare tables'
       },
       addContrast: 'Add contrast task',
       dataDetails: {
@@ -824,86 +532,7 @@ const local: App.I18n.Schema = {
           selectStatus: 'Please Select Status'
         }
       },
-      metaDetails: {
-        title: 'Meta contrast details',
-        readerTable: 'Reader object',
-        writerTable: 'Writer object',
-        metaType: 'Meta type',
-        tableName: 'Object name',
-        fastSelect: 'Fast Select',
-        isConsistent: 'Is Consistent',
-        objectName: 'Object fast name',
-        metaInfo: 'This statement is for comparison purposes only and is not a complete statement.',
-        sideBySide: 'Side by side',
-        lineByLine: 'Line by line',
-        switchSql: 'Switch sql',
-        isCorrect: {
-          consistent: 'Consistent',
-          inconsistent: 'In consistent'
-        },
-        form: {
-          readerTable: 'Please select reader object',
-          writerTable: 'Please select writer object',
-          tableName: 'Please enter object name',
-          fastSelect: 'Fast Select',
-          isCorrect: 'Please select isCorrect'
-        },
-        allTable: 'All result',
-        allCount: 'Source: {0} objects, Target: {1} objects, ',
-        mismatchCount: 'Mismatched objects: {0}',
-        sourceTableNotExist: 'Source object not exist',
-        targetTableNotExist: 'Target object not exist'
-      }
     },
-    report: {
-      metaTitle: 'Metadata Migration Task Statistics',
-      dataTitle: 'Data Migration Task Statistics',
-      metaReport: {
-        metaType: 'Meta Type',
-        allCount: 'All Count',
-        sucessCount: 'Success Count',
-        failCount: 'Fail Count',
-        waitCount: 'Wait Count',
-        executeCount: 'Running Count'
-      }
-    },
-    log: {
-      look: 'Examine',
-      title: 'Log List',
-      taskID: 'Task ID',
-      taskDesc: 'Task description',
-      metaType: 'Meta Type',
-      triggerTime: 'Trigger Time',
-      triggerCode: 'Trigger Result',
-      triggerMsg: 'Trigger Remark',
-      handleTime: 'Handle Time',
-      handleCode: 'Handle Result',
-      handleMsg: 'Handle Remark',
-      form: {
-        enterTaskDesc: 'Please Enter Task',
-        all: 'All Result',
-        allExecutor: 'All Executor',
-        executor: 'Executor',
-        result: 'Result',
-        success: 'Success',
-        fail: 'Fail',
-        running: 'Running'
-      },
-      clearLog: 'Clear Logs',
-      selectClearType: 'Please select clear type',
-      clearType: 'Clear Type',
-      clearMonth1: 'Clear logs older than 1 month',
-      clearMonth3: 'Clear logs older than 3 months',
-      clearMonth6: 'Clear logs older than 6 months',
-      clearYear1: 'Clear logs older than 1 year',
-      clear1k: 'Clear first 1k logs',
-      clear10k: 'Clear first 10k logs',
-      clear30k: 'Clear first 30k logs',
-      clear100k: 'Clear first 100k logs',
-      clearAll: 'Clear all logs',
-      clearSuccess: 'Clear success',
-      clearFail: 'Clear fail'
-    }
   },
   form: {
     required: 'Cannot be empty',

@@ -81,49 +81,143 @@ function toggleLoginModule() {
 <template>
   <NForm ref="formRef" :model="model" :rules="rules" size="large" :show-label="false" @keyup.enter="handleSubmit">
     <NFormItem path="userName">
-      <NInput v-model:value="model.userName" :placeholder="$t('page.login.common.userNamePlaceholder')" />
+      <NInput
+        v-model:value="model.userName"
+        :placeholder="$t('page.login.common.userNamePlaceholder')"
+        class="input-custom"
+      >
+        <template #prefix>
+          <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+          </svg>
+        </template>
+      </NInput>
     </NFormItem>
+
     <NFormItem path="password">
       <NInput
         v-model:value="model.password"
         type="password"
         show-password-on="click"
         :placeholder="$t('page.login.common.passwordPlaceholder')"
-      />
+        class="input-custom"
+      >
+        <template #prefix>
+          <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+          </svg>
+        </template>
+      </NInput>
     </NFormItem>
+
     <NSpace vertical :size="24">
       <div class="flex-y-center justify-between">
-        <NCheckbox>{{ $t('page.login.pwdLogin.rememberMe') }}</NCheckbox>
-        <!--
-        <NButton quaternary @click="toggleLoginModule('reset-pwd')">
-          {{ $t('page.login.pwdLogin.forgetPassword') }}
-        </NButton>
-        -->
-        <NButton quaternary @click="toggleLoginModule()">
+        <NCheckbox class="checkbox-custom">{{ $t('page.login.pwdLogin.rememberMe') }}</NCheckbox>
+        <NButton quaternary class="forgot-password" @click="toggleLoginModule()">
           {{ $t('page.login.pwdLogin.forgetPassword') }}
         </NButton>
       </div>
-      <NButton type="primary" size="large" round block :loading="authStore.loginLoading" @click="handleSubmit">
-        {{ $t('common.confirm') }}
+
+      <NButton
+        type="primary"
+        size="large"
+        round
+        block
+        :loading="authStore.loginLoading"
+        class="login-button"
+        @click="handleSubmit"
+      >
+        <span v-if="!authStore.loginLoading">{{ $t('common.confirm') }}</span>
+        <span v-else>登录中...</span>
       </NButton>
-      <!--
-      <div class="flex-y-center justify-between gap-12px">
-        <NButton class="flex-1" block @click="toggleLoginModule('code-login')">
-          {{ $t(loginModuleRecord['code-login']) }}
-        </NButton>
-        <NButton class="flex-1" block @click="toggleLoginModule('register')">
-          {{ $t(loginModuleRecord.register) }}
-        </NButton>
-      </div>
-      <NDivider class="text-14px text-#666 !m-0">{{ $t('page.login.pwdLogin.otherAccountLogin') }}</NDivider>
-      <div class="flex-center gap-12px">
-        <NButton v-for="item in accounts" :key="item.key" type="primary" @click="handleAccountLogin(item)">
-          {{ item.label }}
-        </NButton>
-      </div>
-      -->
     </NSpace>
   </NForm>
 </template>
 
-<style scoped></style>
+<style scoped>
+/* 自定义输入框样式 */
+.input-custom :deep(.n-input__input-el) {
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+.input-custom :deep(.n-input__border) {
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.input-custom :deep(.n-input__state-border) {
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.input-custom :deep(.n-input--focus) {
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+/* 自定义复选框样式 */
+.checkbox-custom :deep(.n-checkbox-box) {
+  border-radius: 6px;
+}
+
+.checkbox-custom :deep(.n-checkbox__label) {
+  font-size: 14px;
+  color: var(--n-text-color-2);
+}
+
+/* 忘记密码按钮样式 */
+.forgot-password {
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: var(--primary-color);
+  transform: translateX(2px);
+}
+
+/* 登录按钮样式 */
+.login-button {
+  height: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+/* 表单项间距 */
+:deep(.n-form-item) {
+  margin-bottom: 24px;
+}
+
+/* 表单容器 */
+:deep(.n-form) {
+  padding: 0;
+}
+
+/* 响应式优化 */
+@media (max-width: 640px) {
+  .login-button {
+    height: 46px;
+    font-size: 15px;
+  }
+
+  .input-custom :deep(.n-input__input-el) {
+    font-size: 15px;
+  }
+}
+</style>

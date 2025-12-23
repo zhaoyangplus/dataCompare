@@ -45,4 +45,13 @@ const DEFAULT_CLASS = 'h-[36px] text-icon';
   </NTooltip>
 </template>
 
-<style scoped></style>
+<style scoped>
+/* Prevent layout shifts when content changes */
+div {
+  min-width: 20px;
+  min-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>

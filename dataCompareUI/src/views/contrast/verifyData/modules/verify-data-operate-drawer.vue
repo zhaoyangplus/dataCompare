@@ -357,7 +357,7 @@ watch(
               v-model:model-value="model.sourceSchema"
               filterable
               :datasource-id="model.sourceId"
-              :placeholder="$t('page.task.submeta.form.readerSchema')"
+              :placeholder="$t('page.contrast.form.readerSchema')"
               @update:value="handleUpdateReSchemaValue"
             />
           </NFormItemGi>
@@ -374,7 +374,7 @@ watch(
               <div class="form-tip">{{ $t('page.contrast.verifyDetails.tips') }}</div>
             </div>
           </NFormItemGi>
-          <NFormItemGi span="24 m:24" :label="$t('page.task.batch.readerTables')" path="tables">
+          <NFormItemGi span="24 m:24" :label="$t('page.contrast.form.readerTables')" path="tables">
             <div class="nspin-div">
               <NTransfer
                 v-model:value="model.tables"
@@ -407,7 +407,7 @@ watch(
               v-model:model-value="model.targetSchema"
               filterable
               :datasource-id="model.targetId"
-              :placeholder="$t('page.task.batch.form.writerSchema')"
+              :placeholder="$t('page.contrast.form.writerSchema')"
             />
           </NFormItemGi>
         </NGrid>

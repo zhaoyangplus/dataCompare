@@ -46,4 +46,13 @@ function changeLang(lang: App.I18n.LangType) {
   </NDropdown>
 </template>
 
-<style scoped></style>
+<style scoped>
+/* Prevent layout shifts when language changes */
+div {
+  min-width: 40px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>

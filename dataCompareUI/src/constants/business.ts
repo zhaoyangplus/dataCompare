@@ -1,16 +1,6 @@
 import { transformRecordToOption, translateOptions, translateOptionsDb, translateOptionsSubMeta } from '@/utils/common';
 
 /** 已支持的数据源信息 */
-// export const datasourceRecord = [
-//   { label: 'Halo', value: 'halo', imageUrl: '/src/assets/db-imgs/halo.png' },
-//   { label: 'MySQL', value: 'mysql', imageUrl: '/src/assets/db-imgs/mysql.png' },
-//   { label: 'Oracle', value: 'oracle', imageUrl: '/src/assets/db-imgs/oracle.png' },
-//   { label: 'PostgreSQL', value: 'postgresql', imageUrl: '/src/assets/db-imgs/postgresql.png' },
-//   { label: 'SQL Server', value: 'sqlserver', imageUrl: '/src/assets/db-imgs/sqlserver.png' },
-//   { label: '达梦数据库', value: 'dm', imageUrl: '/src/assets/db-imgs/dm.png' },
-//   { label: 'Db2', value: 'db2', imageUrl: '/src/assets/db-imgs/db2.png' },
-//   { label: 'Hive', value: 'hive', imageUrl: '/src/assets/db-imgs/hive.png' }
-// ];
 
 import haloImg from '@/assets/db-imgs/halo.png';
 import mysqlImg from '@/assets/db-imgs/mysql.png';
@@ -20,22 +10,14 @@ import sqlserverImg from '@/assets/db-imgs/sqlserver.png';
 import dmImg from '@/assets/db-imgs/dm.png';
 import db2Img from '@/assets/db-imgs/db2.png';
 import hiveImg from '@/assets/db-imgs/hive.png';
-import polardbImg from '@/assets/db-imgs/polardb.png';
+import polardbImg from '@/assets/db-imgs/polarDb.png';
+import tidbImg from '@/assets/db-imgs/tidb.png';
+import oceanbaseImg from '@/assets/db-imgs/oceanbase.png';
+import snowflakeImg from '@/assets/db-imgs/snowflake.png';
+import mariadbImg from '@/assets/db-imgs/mariadb.png';
+import kingbaseImg from '@/assets/db-imgs/kingbase.png';
+import opengaussImg from '@/assets/db-imgs/opengauss.png';
 
-
-// export const enableStatusRecord: Record<Api.Common.EnableStatus, App.I18n.I18nKey> = {
-//   '1': 'page.manage.common.status.enable',
-//   '2': 'page.manage.common.status.disable'
-// };
-
-// export const enableStatusOptions = transformRecordToOption(enableStatusRecord);
-
-// export const userGenderRecord: Record<Api.SystemManage.UserGender, App.I18n.I18nKey> = {
-//   '1': 'page.manage.user.gender.male',
-//   '2': 'page.manage.user.gender.female'
-// };
-
-// export const userGenderOptions = transformRecordToOption(userGenderRecord);
 
 export const menuTypeRecord: Record<Api.SystemManage.MenuType, App.I18n.I18nKey> = {
   '1': 'page.manage.menu.type.directory',
@@ -51,10 +33,6 @@ export const menuIconTypeRecord: Record<Api.SystemManage.IconType, App.I18n.I18n
 
 export const menuIconTypeOptions = transformRecordToOption(menuIconTypeRecord);
 
-// export const userGenderRecord = [
-//   { value: 1, label: 'page.manage.user.gender.male' },
-//   { value: 2, label: 'page.manage.user.gender.female' }
-// ];
 
 /** 元、数据对比方式 （一致、不一致） */
 export const isCorrectRecord: Record<Api.DataDetailsManage.IsCorrect, App.I18n.I18nKey> = {
@@ -75,11 +53,6 @@ export const isCorrectOptions = [
   { value: '1', label: 'page.contrast.dataDetails.isCorrect.inconsistent' }
 ];
 
-/** 执行器注册方式 （自动、人工） */
-export const registerTypeRecord: Record<Api.ExecutorManage.RegisterType, App.I18n.I18nKey> = {
-  '0': 'page.executor.manage.register.autoRegister',
-  '1': 'page.executor.manage.register.manualRegister'
-};
 
 export const numberRegisterTypeOptions = [
   { value: 0, label: 'page.executor.manage.register.autoRegister' },
@@ -90,12 +63,6 @@ export const registerTypeOptions = [
   { value: '0', label: 'page.executor.manage.register.autoRegister' },
   { value: '1', label: 'page.executor.manage.register.manualRegister' }
 ];
-
-/** 数据类型映射是否保留括号值 */
-export const isRetainValueRecord: Record<Api.DtmManage.IsRetainValue, App.I18n.I18nKey> = {
-  '0': 'page.task.datatype.form.value.notRetainValue',
-  '1': 'page.task.datatype.form.value.retainValue'
-};
 
 export const numberIsRetainValueOptions = [
   { value: 0, label: 'page.task.datatype.form.value.notRetainValue' },
@@ -127,7 +94,6 @@ export const enableStatusOptions = [
 /** 用户性别 */
 
 export const userGenderRecord: Record<Api.SystemManage.UserGender, App.I18n.I18nKey> = {
-  '0': 'page.manage.user.gender.unknown',
   '1': 'page.manage.user.gender.male',
   '2': 'page.manage.user.gender.female'
 };
@@ -146,9 +112,9 @@ export const userGenderOptions = [
 
 export const datasourceRecord = [
   {
-    label: 'page.datasource.manage.datasourceRecord.halo',
-    value: 'halo',
-    imageUrl: haloImg
+    label: 'page.datasource.manage.datasourceRecord.snowflake',
+    value: 'snowflake',
+    imageUrl: snowflakeImg
   },
   {
     label: 'page.datasource.manage.datasourceRecord.mysql',
@@ -171,14 +137,14 @@ export const datasourceRecord = [
     imageUrl: sqlserverImg
   },
   {
-    label: 'page.datasource.manage.datasourceRecord.dm',
-    value: 'dm',
-    imageUrl: dmImg
-  },
-  {
     label: 'page.datasource.manage.datasourceRecord.db2',
     value: 'db2',
     imageUrl: db2Img
+  },
+  {
+    label: 'page.datasource.manage.datasourceRecord.mariadb',
+    value: 'mariadb',
+    imageUrl: mariadbImg
   },
   {
     label: 'page.datasource.manage.datasourceRecord.hive',
@@ -186,67 +152,43 @@ export const datasourceRecord = [
     imageUrl: hiveImg
   },
   {
+    label: 'page.datasource.manage.datasourceRecord.halo',
+    value: 'halo',
+    imageUrl: haloImg
+  },
+  {
+    label: 'page.datasource.manage.datasourceRecord.dm',
+    value: 'dm',
+    imageUrl: dmImg
+  },
+  {
     label: 'page.datasource.manage.datasourceRecord.polardb',
     value: 'polardb',
     imageUrl: polardbImg
+  },
+  {
+    label: 'page.datasource.manage.datasourceRecord.tidb',
+    value: 'tidb',
+    imageUrl: tidbImg
+  },
+  {
+    label: 'page.datasource.manage.datasourceRecord.oceanbase',
+    value: 'oceanbase',
+    imageUrl: oceanbaseImg
+  },
+  {
+    label: 'page.datasource.manage.datasourceRecord.kingbase',
+    value: 'kingbase',
+    imageUrl: kingbaseImg
+  },
+  {
+    label: 'page.datasource.manage.datasourceRecord.opengauss',
+    value: 'opengauss',
+    imageUrl: opengaussImg
   }
 ];
 
 export const datasourceOptions = translateOptionsDb(datasourceRecord);
-
-/** 已支持的元数据类型 */
-export const subMetaTypeRecord = [
-  {
-    value: 1,
-    label: 'page.task.submeta.subMetaTypeRecord.type'
-  },
-  {
-    value: 2,
-    label: 'page.task.submeta.subMetaTypeRecord.table'
-  },
-  {
-    value: 3,
-    label: 'page.task.submeta.subMetaTypeRecord.constraints'
-  },
-  {
-    value: 4,
-    label: 'page.task.submeta.subMetaTypeRecord.index'
-  },
-  {
-    value: 5,
-    label: 'page.task.submeta.subMetaTypeRecord.function'
-  },
-  {
-    value: 6,
-    label: 'page.task.submeta.subMetaTypeRecord.procedure'
-  },
-  {
-    value: 7,
-    label: 'page.task.submeta.subMetaTypeRecord.view'
-  },
-  {
-    value: 8,
-    label: 'page.task.submeta.subMetaTypeRecord.trigger'
-  },
-  {
-    value: 9,
-    label: 'page.task.submeta.subMetaTypeRecord.package'
-  },
-  {
-    value: 10,
-    label: 'page.task.submeta.subMetaTypeRecord.sequence'
-  },
-  {
-    value: 11,
-    label: 'page.task.submeta.subMetaTypeRecord.tablecomment'
-  },
-  {
-    value: 12,
-    label: 'page.task.submeta.subMetaTypeRecord.synonym'
-  }
-];
-
-export const subMetaTypeOptions = translateOptionsSubMeta(subMetaTypeRecord);
 
 /** 是否包含大字段 */
 export const isBigTypeRecord = [

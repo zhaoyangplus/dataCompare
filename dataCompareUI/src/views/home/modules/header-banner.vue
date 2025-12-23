@@ -3,7 +3,6 @@ import { computed, onMounted, ref } from 'vue';
 import { $t } from '@/locales';
 import { useAppStore } from '@/store/modules/app';
 import { useAuthStore } from '@/store/modules/auth';
-// import { getVersionInfo } from '@/service/api';
 
 defineOptions({
   name: 'HeaderBanner'
@@ -20,39 +19,23 @@ interface StatisticData {
   value: string;
 }
 
-const versionValue = ref('V-250428');
-
 const statisticData = computed<StatisticData[]>(() => [
   {
     id: 0,
-    label: $t('page.home.projectCount'),
-    value: '25'
+    label: '支持的数据库',
+    value: '100'
   },
   {
     id: 1,
-    label: $t('page.home.todo'),
-    value: '4/16'
-  },
-  {
-    id: 2,
-    label: $t('page.home.message'),
-    value: '12'
-  }
+    label: '今日对比任务',
+    value: '1000'
+  // },
   // {
-  //   id: 0,
-  //   label: $t('page.home.todo'),
-  //   value: versionValue.value
-  // }
+  //   id: 2,
+  //   label: '本月对比任务',
+  //   value: '186'
+  }
 ]);
-
-// async function getVersion() {
-//   const res = await getVersionInfo();
-//   versionValue.value = res.data.version;
-// }
-
-// onMounted(() => {
-//   getVersion();
-// });
 </script>
 
 <template>
@@ -61,13 +44,15 @@ const statisticData = computed<StatisticData[]>(() => [
       <NGi span="24 s:24 m:18">
         <div class="flex-y-center">
           <div class="size-72px shrink-0 overflow-hidden rd-1/2">
-            <img src="@/assets/imgs/usertx.jpg" class="size-full" />
+            <img src="@/assets/imgs/wjx.jpg" class="size-full" />
           </div>
           <div class="pl-12px">
             <h3 class="text-18px font-semibold">
               {{ $t('page.home.greeting', { userName: authStore.userInfo.userName }) }}
             </h3>
-            <p class="text-#999 leading-30px">{{ $t('page.home.weatherDesc') }}</p>
+            <p class="text-#999 leading-30px">
+              {{ $t('page.home.weatherDesc') }}
+            </p>
           </div>
         </div>
       </NGi>
