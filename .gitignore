@@ -5,3 +5,4 @@ database/local_test.sql
 ._*
 test_local.txt
 target
+logs/*
