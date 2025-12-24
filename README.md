@@ -83,6 +83,15 @@ pnpm dev
 
 ```build
 pnpm build
+
+```Enter the website address in the browser.
+http://localhost:9725/
+
+```login && password
+
+default login: admin
+default password: 123456
+
 ```
 
 
