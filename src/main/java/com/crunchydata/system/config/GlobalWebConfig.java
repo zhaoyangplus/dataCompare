@@ -18,9 +18,9 @@ public class GlobalWebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         // 添加一个全局映射规则，允许所有域名（ "*" ）访问，并且允许携带认证信息（cookies等），即允许跨域请求包含凭据
         registry.addMapping("/**")
-//                .allowedOriginPatterns("*") // 允许任何源发起的请求
+                .allowedOriginPatterns("*") // 允许任何源发起的请求
                 // 关键修改1：去掉通配符*，明确指定允许的前端源（多个源用逗号分隔或多次调用addAllowedOrigin）
-                .allowedOrigins("http://localhost:9725")
+//                .allowedOrigins("http://localhost:9725")
                 .allowCredentials(true) // 允许跨域请求带有验证信息（cookies）
 
                 // 允许所有的请求头通过
